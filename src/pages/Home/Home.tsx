@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  text-align: center;
   a {
     text-align: center;
   }
@@ -18,8 +19,11 @@ const Wrapper = styled.div`
 
 export const Home: FC = () => (
   <Wrapper>
-    <Link to='/face'>
-      <img src={logo} alt="logo" />
-    </Link>
+    <div>
+      <h1>McHeart</h1>
+      <Link to='/face'>
+        <img src={logo} alt="logo" />
+      </Link>
+    </div>
   </Wrapper >
 );
