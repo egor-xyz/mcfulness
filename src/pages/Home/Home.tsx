@@ -10,7 +10,10 @@ const Wrapper = styled.div`
   min-height: 100vh;
   text-align: center;
   a {
+    margin: 20px auto;
+    text-decoration: none;
     text-align: center;
+    color: #635b5b;
   }
   img {
     width: 40%;
@@ -24,7 +27,9 @@ export const Home: FC = () => (
       <Link to='/face'>
         <img src={logo} alt="logo" />
       </Link>
-      <Link to='/player'>Player</Link>
+      <div>
+        <Link to='/player'>Show Player</Link>
+      </div>
     </div>
   </Wrapper >
 );
