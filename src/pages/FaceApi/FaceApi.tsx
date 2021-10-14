@@ -1,16 +1,16 @@
 // @ts-nocheck
 
-import React from "react";
-import * as faceApi from "face-api.js";
+import React from 'react';
+import * as faceApi from 'face-api.js';
 
 const expressionMap = {
-  neutral: "😶",
-  happy: "😄",
-  sad: "😞",
-  angry: "🤬",
-  fearful: "😖",
-  disgusted: "🤢",
-  surprised: "😲"
+  angry: '🤬',
+  disgusted: '🤢',
+  fearful: '�',
+  happy: '😄',
+  neutral: '�',
+  sad: '😞',
+  surprised: '😲'
 };
 
 export class FaceApi extends React.Component {
@@ -27,12 +27,12 @@ export class FaceApi extends React.Component {
   };
 
   run = async () => {
-    this.log("run started");
+    this.log('run started');
     try {
-      await faceApi.nets.tinyFaceDetector.load("/models/");
-      await faceApi.loadFaceExpressionModel(`/models/`);
+      await faceApi.nets.tinyFaceDetector.load('/models/');
+      await faceApi.loadFaceExpressionModel('/models/');
       this.mediaStream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: "user" }
+        video: { facingMode: 'user' }
       });
 
       this.video.current.srcObject = this.mediaStream;
@@ -78,45 +78,51 @@ export class FaceApi extends React.Component {
   };
 
   render() {
+    const { expressions } = this.state;
     return (
-      <div style={{
-        display: "flex",
-        minHeight: "100vh",
-        justifyContent: "center",
-      }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          minHeight: '100vh',
+        }}
+      >
         <div>
           <h1>Face Recognition Webcam</h1>
           <div>
-            {this.state.expressions
+            {expressions
               .sort((a, b) => b[1] - a[1])
               .filter((_, i) => i < 3)
               .map(([e, w], i) => {
                 if (i > 0) return <></>;
                 return (
-                  <p key={e + w} style={{
-                    textAlign: 'center',
-                    fontSize: '40px',
-                  }}>
+                  <p
+                    key={e + w}
+                    style={{
+                      fontSize: '40px',
+                      textAlign: 'center',
+                    }}
+                  >
                     {e}
                   </p>
-                )
+                );
               })}
           </div>
-          <div style={{ position: "relative" }}>
+          <div style={{ position: 'relative' }}>
             <video
-              ref={this.video}
               autoPlay
               muted
               playsInline
-              onPlay={this.onPlay}
+              ref={this.video}
               style={{
-                position: "absolute",
-                width: "100%",
-                left: 0,
-                right: 0,
                 bottom: 0,
-                top: 0
+                left: 0,
+                position: 'absolute',
+                right: 0,
+                top: 0,
+                width: '100%'
               }}
+              onPlay={this.onPlay}
             />
           </div>
         </div>
