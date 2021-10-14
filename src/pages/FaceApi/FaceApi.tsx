@@ -79,37 +79,45 @@ export class FaceApi extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Face Recognition Webcam</h1>
+      <div style={{
+        display: "flex",
+        minHeight: "100vh",
+        justifyContent: "center",
+      }}>
         <div>
-          {this.state.expressions
-            .sort((a, b) => b[1] - a[1])
-            .filter((_, i) => i < 3)
-            .map(([e, w], i) => {
-              if (i > 0) return <></>;
-              return (
-                <p key={e + w}>
-                  {e} {w}
-                </p>
-              )
-            })}
-        </div>
-        <div style={{ width: "50%", height: "50vh", position: "relative" }}>
-          <video
-            ref={this.video}
-            autoPlay
-            muted
-            onPlay={this.onPlay}
-            style={{
-              position: "absolute",
-              width: "50%",
-              height: "50vh",
-              left: 0,
-              right: 0,
-              bottom: 0,
-              top: 0
-            }}
-          />
+          <h1>Face Recognition Webcam</h1>
+          <div>
+            {this.state.expressions
+              .sort((a, b) => b[1] - a[1])
+              .filter((_, i) => i < 3)
+              .map(([e, w], i) => {
+                if (i > 0) return <></>;
+                return (
+                  <p key={e + w} style={{
+                    textAlign: 'center',
+                    fontSize: '40px',
+                  }}>
+                    {e}
+                  </p>
+                )
+              })}
+          </div>
+          <div style={{ position: "relative" }}>
+            <video
+              ref={this.video}
+              autoPlay
+              muted
+              onPlay={this.onPlay}
+              style={{
+                position: "absolute",
+                width: "100%",
+                left: 0,
+                right: 0,
+                bottom: 0,
+                top: 0
+              }}
+            />
+          </div>
         </div>
       </div>
     );
