@@ -15,7 +15,7 @@ export const StyledLogo = styled(Logo)`
 export const Title = styled.div`
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
