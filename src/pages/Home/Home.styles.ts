@@ -5,9 +5,7 @@ import { Logo } from 'assets';
 export const Wrapper = styled.div`
 max-width: 375px;
 margin: 0 auto;
-background-color: #f1f1f1;
 height: 100vh;
-overflow: hidden;
 `;
 
 export const StyledLogo = styled(Logo)`
@@ -16,11 +14,10 @@ export const StyledLogo = styled(Logo)`
 
 export const Title = styled.div`
   text-align: center;
-  margin-top: 70px;
+  margin-top: 10px;
   margin-bottom: 40px;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 50px;
+  font-size: 30px;
   text-align: center;
   color: #000000;
 `;
