@@ -7,3 +7,4 @@ export { ReactComponent as Calm } from 'assets/Calm.svg';
 export { ReactComponent as Optimistic } from 'assets/Optimistic.svg';
 export { ReactComponent as Tired } from 'assets/tired.svg';
 export { ReactComponent as Jumpy } from 'assets/jumpy.svg';
+export { ReactComponent as YBG } from 'assets/y-bg.svg';
