@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Logo } from 'assets';
 
 export const Wrapper = styled.div`
+max-width: 375px;
+margin: 0 auto;
 background-color: #f1f1f1;
 height: 100vh;
 overflow: hidden;
