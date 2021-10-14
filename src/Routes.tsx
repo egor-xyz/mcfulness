@@ -1,12 +1,17 @@
-import { Route, RouteProps, Switch } from "react-router";
-import { Home } from "pages";
 import { FC } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { Route, RouteProps, Switch } from "react-router";
+
+import { FaceApi, Home } from "pages";
 
 const routes: RouteProps[] = [
   {
     path: "/",
     component: Home
+  },
+  {
+    path: "/face",
+    component: FaceApi
   }
 ];
 
