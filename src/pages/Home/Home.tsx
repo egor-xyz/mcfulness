@@ -1,12 +1,16 @@
 import { FC } from "react";
 import styled from "styled-components";
 import logo from 'assets/McHeart.png';
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  a {
+    text-align: center;
+  }
   img {
     width: 40%;
   }
@@ -14,6 +18,8 @@ const Wrapper = styled.div`
 
 export const Home: FC = () => (
   <Wrapper>
-    <img src={logo} alt="logo" />
-  </Wrapper>
+    <Link to='/face'>
+      <img src={logo} alt="logo" />
+    </Link>
+  </Wrapper >
 );
