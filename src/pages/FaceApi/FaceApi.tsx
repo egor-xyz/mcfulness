@@ -65,7 +65,7 @@ export class FaceApi extends React.Component {
       const expressions = result.expressions.reduce(
         (acc, { expression, probability }) => {
           // acc.push([expressionMap[expression], probability]);
-          acc.push([expression, probability]);
+          acc.push([`${expressionMap[expression]} ${expression}`, probability]);
           return acc;
         },
         []
