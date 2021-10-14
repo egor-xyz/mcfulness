@@ -1,6 +1,8 @@
 // @ts-nocheck
-import { FC } from "react";
-import styled from "styled-components";
+import { FC } from 'react';
+import styled from 'styled-components';
+
+import { ReactComponent as Button } from 'assets/fakeRound.svg';
 
 const Wrapper = styled.div`
 display: flex;
@@ -20,44 +22,50 @@ background-color: #000;
     transform: translateX(-50%);
   }
 }
-button {
+.button {
   position: fixed;
-  left: 20px;
-  bottom: 20px;
-  font-size: 30px;
-  opacity: .5;
+  left: 50%;
+  bottom: 50px;
+  width: 100px;
+  height: 100px;
+  transform: translateX(-50%);
 }
 `;
 
 export const Player: FC = () => {
   return (<Wrapper>
-    <div className="video">
+    <div className='video'>
       <video
         // height="100%"
         // width="100%"
-        className="video-player__viewer"
-        video-player-target="video"
-        data-action="click->video-player--video-player#togglePlay timeupdate->video-player--video-player#progressUpdate loadedmetadata->video-player--video-player#setVideoDuration"
-        src="https://assets.mixkit.co/videos/preview/mixkit-tree-with-yellow-flowers-1173-large.mp4"
-        disablePictureInPicture
         autoPlay
-        playsInline
-        controls={false}
+        disablePictureInPicture
         loop
         muted
+        playsInline
+        className='video-player__viewer'
+        controls={false}
+        src='https://assets.mixkit.co/videos/preview/mixkit-tree-with-yellow-flowers-1173-large.mp4'
+        video-player-target='video'
       />
     </div>
 
-    <button onClick={() => document.getElementById('audio').play()}>Play</button>
+    <Button
+      className='button'
+      onClick={() => document.getElementById('audio').play()}
+    />
 
-    <div className="audio">
-      <audio controls id="audio">
+    <div className='audio'>
+      <audio
+        controls
+        id='audio'
+      >
         <source
-          src="https://www.mindfulness-network.org/wp-content/uploads/2018/09/Breath-and-the-Body-6-mins-and-30-sec-9MB.mp3"
-          type="audio/mpeg"
+          src='https://www.mindfulness-network.org/wp-content/uploads/2018/09/Breath-and-the-Body-6-mins-and-30-sec-9MB.mp3'
+          type='audio/mpeg'
         />
         Your browser does not support the audio element.
       </audio>
     </div>
-  </Wrapper >)
-}
+  </Wrapper >);
+};

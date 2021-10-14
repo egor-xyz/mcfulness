@@ -1,21 +1,21 @@
-import { FC } from "react";
-import { HashRouter } from "react-router-dom";
-import { Route, RouteProps, Switch } from "react-router";
+import { FC } from 'react';
+import { HashRouter } from 'react-router-dom';
+import { Route, RouteProps, Switch } from 'react-router';
 
-import { FaceApi, Home, Player } from "pages";
+import { FaceApi, Home, Player } from 'pages';
 
 const routes: RouteProps[] = [
   {
-    path: "/",
-    component: Home
+    component: Home,
+    path: '/'
   },
   {
-    path: "/face",
-    component: FaceApi
+    component: FaceApi,
+    path: '/face'
   },
   {
-    path: "/player",
-    component: Player
+    component: Player,
+    path: '/player'
   }
 ];
 

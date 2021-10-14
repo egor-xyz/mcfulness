@@ -9,6 +9,7 @@
     "test": "react-scripts test"
   },
   "dependencies": {
+    "@egor.xyz/eslint-config": "^0.0.8",
     "@tensorflow/tfjs-node": "^3.9.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -28,12 +29,6 @@
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.1",
     "typescript": "^4.4.4"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
