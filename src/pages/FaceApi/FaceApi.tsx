@@ -107,6 +107,7 @@ export class FaceApi extends React.Component {
               ref={this.video}
               autoPlay
               muted
+              playsInline
               onPlay={this.onPlay}
               style={{
                 position: "absolute",
