@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { ReactComponent as Button } from 'assets/fakeRound.svg';
 
 const Wrapper = styled.div`
+max-width: 375px;
+margin: 0 auto !important;
 display: flex;
 justify-content: center;
 align-items: center;
