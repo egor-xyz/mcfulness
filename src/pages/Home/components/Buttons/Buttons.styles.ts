@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   margin-top: 20px;
   font-size: 0;
+  padding: 0 40px;
   > div {
     box-sizing: border-box;
     position: relative;
@@ -14,5 +15,7 @@ export const Wrapper = styled.div`
   svg {
     position: absolute;
     left: 0;
+    transform: scale(.8);
+    transform-origin: center center;
   }
 `;
