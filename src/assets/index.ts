@@ -1,5 +1,6 @@
 export { ReactComponent as Anxious } from 'assets/anxious.svg';
-export { ReactComponent as fakeRound } from 'assets/fakeRound.svg';
+export { ReactComponent as Start } from 'assets/start.svg';
+export { ReactComponent as Stop } from 'assets/stop.svg';
 export { ReactComponent as Logo } from 'assets/logo.svg';
 export { ReactComponent as Busy } from 'assets/busy.svg';
 export { ReactComponent as Calm } from 'assets/Calm.svg';

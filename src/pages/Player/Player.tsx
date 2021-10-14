@@ -1,8 +1,9 @@
 // @ts-nocheck
-import { FC } from 'react';
+import { FC, useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { Redirect } from 'react-router';
 
-import { ReactComponent as Button } from 'assets/fakeRound.svg';
+import { Start, Stop } from 'assets';
 
 const Wrapper = styled.div`
 max-width: 450px;
@@ -35,11 +36,26 @@ background-color: #000;
 `;
 
 export const Player: FC = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [redirect, setRedirect] = useState<string>();
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  const togglePlay = useCallback(() => {
+    if (isPlaying) {
+      setIsPlaying(false);
+      audioRef.current?.pause();
+      setRedirect('/thank-you');
+      return;
+    }
+    audioRef.current?.play();
+    setIsPlaying(true);
+  }, [audioRef.current, isPlaying]);
+
+  if (redirect) return <Redirect to={redirect} />;
+
   return (<Wrapper>
     <div className='video'>
       <video
-        // height="100%"
-        // width="100%"
         autoPlay
         disablePictureInPicture
         loop
@@ -52,15 +68,23 @@ export const Player: FC = () => {
       />
     </div>
 
-    <Button
-      className='button'
-      onClick={() => document.getElementById('audio').play()}
-    />
+    {isPlaying ? (
+      <Stop
+        className='button'
+        onClick={togglePlay}
+      />
+    ) : (
+      <Start
+        className='button'
+        onClick={togglePlay}
+      />
+    )}
 
     <div className='audio'>
       <audio
         controls
         id='audio'
+        ref={audioRef}
       >
         <source
           src='https://www.mindfulness-network.org/wp-content/uploads/2018/09/Breath-and-the-Body-6-mins-and-30-sec-9MB.mp3'
