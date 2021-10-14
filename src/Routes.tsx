@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Route, RouteProps, Switch } from "react-router";
 
 import { FaceApi, Home } from "pages";
@@ -17,7 +17,7 @@ const routes: RouteProps[] = [
 
 export const Routes: FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         {routes.map((props, index) => (
           <Route
@@ -27,6 +27,6 @@ export const Routes: FC = () => {
           />
         ))}
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
