@@ -24,6 +24,7 @@ export const Home: FC = () => (
       <Link to='/face'>
         <img src={logo} alt="logo" />
       </Link>
+      <Link to='/player'>Player</Link>
     </div>
   </Wrapper >
 );
