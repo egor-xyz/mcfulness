@@ -13,3 +13,9 @@ export const Text = styled.div`
   margin-top: 140px;
   font-size: 40px;
 `;
+
+export const Text2 = styled.div`
+  margin-top: 120px;
+  font-size: 40px;
+  color: #fff;
+`;

@@ -46,7 +46,7 @@ export const Player: FC = () => {
       audioRef.current?.pause();
       setTimeout(() => {
         setRedirect('/thank-you');
-      }, 2000);
+      }, 1000);
       return;
     }
     audioRef.current?.play();
