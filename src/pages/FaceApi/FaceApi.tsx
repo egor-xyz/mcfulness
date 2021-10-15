@@ -22,7 +22,9 @@ export class FaceApi extends React.Component {
   state = { expressions: [] };
 
   componentDidMount() {
-    this.run();
+    try {
+      this.run();
+    } catch (e) { /**/ }
   }
 
   log = (...args) => {
@@ -38,6 +40,8 @@ export class FaceApi extends React.Component {
         video: { facingMode: 'user' }
       });
 
+      if (!this.mediaStream) return;
+
       this.video.current.srcObject = this.mediaStream;
     } catch (e) {
       this.log(e.name, e.message, e.stack);
@@ -45,39 +49,41 @@ export class FaceApi extends React.Component {
   };
 
   onPlay = async () => {
-    if (
-      this.video.current.paused ||
-      this.video.current.ended ||
-      !faceApi.nets.tinyFaceDetector.params
-    ) {
-      setTimeout(() => this.onPlay());
-      return;
-    }
+    try {
+      if (
+        this.video.current?.paused ||
+        this.video.current?.ended ||
+        !faceApi?.nets?.tinyFaceDetector?.params
+      ) {
+        setTimeout(() => this.onPlay());
+        return;
+      }
 
-    const options = new faceApi.TinyFaceDetectorOptions({
-      inputSize: 512,
-      scoreThreshold: 0.5
-    });
+      const options = new faceApi.TinyFaceDetectorOptions({
+        inputSize: 512,
+        scoreThreshold: 0.5
+      });
 
-    const result = await faceApi
-      .detectSingleFace(this.video.current, options)
-      .withFaceExpressions();
+      const result = await faceApi
+        .detectSingleFace(this.video.current, options)
+        .withFaceExpressions();
 
-    if (result) {
-      this.log(result);
-      const expressions = result.expressions.reduce(
-        (acc, { expression, probability }) => {
-          // acc.push([expressionMap[expression], probability]);
-          acc.push([`${expressionMap[expression]} ${expression}`, probability]);
-          return acc;
-        },
-        []
-      );
-      this.log(expressions);
-      this.setState(() => ({ expressions }));
-    }
+      if (result) {
+        this.log(result);
+        const expressions = result.expressions.reduce(
+          (acc, { expression, probability }) => {
+            // acc.push([expressionMap[expression], probability]);
+            acc.push([`${expressionMap[expression]} ${expression}`, probability]);
+            return acc;
+          },
+          []
+        );
+        this.log(expressions);
+        this.setState(() => ({ expressions }));
+      }
 
-    setTimeout(() => this.onPlay(), 1000);
+      setTimeout(() => this?.onPlay(), 1000);
+    } catch (e) { /**/ }
   };
 
   render() {
@@ -101,7 +107,7 @@ export class FaceApi extends React.Component {
                 if (i > 0) return <></>;
                 return (
                   <p
-                    key={e + w}
+                    key={e + w + i}
                     style={{
                       fontSize: '40px',
                       textAlign: 'center',
