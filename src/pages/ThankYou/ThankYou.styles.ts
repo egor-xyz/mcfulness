@@ -17,12 +17,18 @@ export const StyledYBG = styled(YBG)`
   width: 100%;
   z-index: -1;
   transform: translateX(-50%);
+  @media screen and (max-width: 390px) {
+    bottom: -90px;
+  }
 `;
 
 export const Title = styled.div`
   margin-top: 10px;
   font-size: 34px;
   font-weight: bold;
+  @media screen and (max-width: 390px) {
+    font-size: 25px;
+  }
 `;
 
 export const Footer = styled.div`
@@ -44,6 +50,9 @@ export const Text = styled.div`
   font-size: 48px;
   color: #fff;
   margin-bottom: 40px;
+  @media screen and (max-width: 390px) {
+    font-size: 30px;
+  }
 `;
 
 export const StyledFivetips = styled(Fivetips)`
