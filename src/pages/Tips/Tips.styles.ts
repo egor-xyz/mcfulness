@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { TipsBg, Next } from 'assets';
+import { TipsBg, Next, WhiteRound, LastMessage } from 'assets';
 
 export const Wrapper = styled.div`
   max-width: 450px;
@@ -50,5 +50,21 @@ export const StyledNext = styled(Next)`
   bottom: 20%;
   left: 50%;
   height: 140px;
+  transform: translate3d(-50%, 50%, 0);
+`;
+
+export const StyledWhiteRound = styled(WhiteRound)`
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  height: 140px;
+  transform: translate3d(-50%, 50%, 0);
+`;
+
+export const StyledLastMessage = styled(LastMessage)`
+  position: fixed;
+  bottom: 12%;
+  left: 50%;
+  height: 120px;
   transform: translate3d(-50%, 50%, 0);
 `;
