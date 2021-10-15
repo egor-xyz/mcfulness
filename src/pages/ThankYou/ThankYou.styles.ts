@@ -1,32 +1,45 @@
 import styled from 'styled-components';
 
-import { YBG } from 'assets';
+import { Fivetips, YBG } from 'assets';
 
 export const Wrapper = styled.div`
   max-width: 450px;
   position: relative;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100%;
+  overflow: hidden;
 `;
 
 export const StyledYBG = styled(YBG)`
   position: absolute;
-  top: 20%;
-  left: 0;
-  width: 100%;
+  bottom: 0;
+  left: 50%;
+  width: 140%;
   z-index: -1;
+  transform: translateX(-50%);
+`;
+
+export const Title = styled.div`
+  margin-top: 10px;
+  font-size: 34px;
+  font-weight: bold;
 `;
 
 export const Text = styled.div`
-  margin-top: 40px;
+  position: fixed;
+  left: 0;
+  bottom: 250px;
+  width: 100%;
   font-size: 40px;
+  line-height: 70px;
+  font-weight: 600;
+  font-size: 48px;
+  color: #fff;
 `;
 
-export const Text2 = styled.div`
+export const StyledFivetips = styled(Fivetips)`
   position: absolute;
-  margin-top: 35%;
-  left: 0;
-  width: 100%;
-  font-size: 35px;
-  color: #fff;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
 `;
