@@ -16,6 +16,6 @@ export const Text = styled.div`
 
 export const Text2 = styled.div`
   margin-top: 120px;
-  font-size: 40px;
+  font-size: 35px;
   color: #fff;
 `;
