@@ -39,7 +39,7 @@ export const Text = styled.div`
   bottom: 270px;
   width: 100%;
   font-size: 40px;
-  line-height: 70px;
+  line-height: 1.2;
   font-weight: 600;
   font-size: 48px;
   color: #fff;
