@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { Route, RouteProps, Switch } from 'react-router';
 
-import { FaceApi, Home, Player, ThankYou } from 'pages';
+import { FaceApi, Home, Player, ThankYou, Tips } from 'pages';
 
 const routes: RouteProps[] = [
   {
@@ -20,6 +20,10 @@ const routes: RouteProps[] = [
   {
     component: ThankYou,
     path: '/thank-you'
+  },
+  {
+    component: Tips,
+    path: '/tips'
   }
 ];
 

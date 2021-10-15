@@ -11,6 +11,8 @@ export const ThankYou: FC = () => (<Wrapper>
   <Title>Your Order<br />is ready</Title>
   <Footer >
     <Text>Sit down,<br /> Slow down<br />and<br />Enjoy</Text>
-    <StyledFivetips />
+    <Link to='/tips'>
+      <StyledFivetips />
+    </Link>
   </Footer>
 </Wrapper>);
