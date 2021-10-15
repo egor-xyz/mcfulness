@@ -14,7 +14,7 @@ export const StyledYBG = styled(YBG)`
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 140%;
+  width: 100%;
   z-index: -1;
   transform: translateX(-50%);
 `;
