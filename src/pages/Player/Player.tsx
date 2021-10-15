@@ -1,39 +1,10 @@
 // @ts-nocheck
 import { FC, useCallback, useRef, useState } from 'react';
-import styled from 'styled-components';
 import { Redirect } from 'react-router';
 
 import { Start, Stop } from 'assets';
 
-const Wrapper = styled.div`
-max-width: 450px;
-margin: 0 auto !important;
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-margin: 0px;
-position: relative;
-background-color: #000;
-.video {
-  height: 100%;
-  overflow: hidden;
-}
-.audio {
-  display: none;
-  audio {
-    transform: translateX(-50%);
-  }
-}
-.button {
-  position: fixed;
-  left: 50%;
-  bottom: 50px;
-  width: 100px;
-  height: 100px;
-  transform: translateX(-50%);
-}
-`;
+import { Wrapper, Title } from './Player.styles';
 
 export const Player: FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -42,11 +13,10 @@ export const Player: FC = () => {
 
   const togglePlay = useCallback(() => {
     if (isPlaying) {
-      setIsPlaying(false);
       audioRef.current?.pause();
       setTimeout(() => {
         setRedirect('/thank-you');
-      }, 1000);
+      }, 500);
       return;
     }
     audioRef.current?.play();
@@ -70,9 +40,21 @@ export const Player: FC = () => {
       />
     </div>
 
+    {!isPlaying && (
+      <Title >
+        Mindfulness<br />
+        of deep breaths
+      </Title>
+    )}
+
     {isPlaying ? (
       <Stop
         className='button'
+        style={{
+          opacity: 0.5,
+          transform: 'scale(0.7) translateX(-70%)',
+          transformOrigin: 'center center'
+        }}
         onClick={togglePlay}
       />
     ) : (
