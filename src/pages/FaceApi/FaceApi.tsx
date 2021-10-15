@@ -27,11 +27,17 @@ export class FaceApi extends React.Component {
     } catch (e) { /**/ }
   }
 
+  componentWillUnmount() {
+    this.mediaStream?.getTracks().forEach(track => track.stop());
+    this.unmounted = true;
+  }
+
   log = (...args) => {
     console.log(...args);
   };
 
   run = async () => {
+    if (this.unmounted) return;
     this.log('run started');
     try {
       await faceApi.nets.tinyFaceDetector.load('/models/');
@@ -49,6 +55,7 @@ export class FaceApi extends React.Component {
   };
 
   onPlay = async () => {
+    if (this.unmounted) return;
     try {
       if (
         this.video.current?.paused ||
