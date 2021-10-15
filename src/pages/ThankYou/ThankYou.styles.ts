@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 
 export const StyledYBG = styled(YBG)`
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
   left: 50%;
   width: 100%;
   z-index: -1;
