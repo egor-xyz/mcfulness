@@ -21,6 +21,9 @@ export const CenterWrapper = styled.div`
 
 export const StyledTipsBg = styled(TipsBg)`
   width: 100%;
+  @media screen and (max-width: 390px) {
+    width: 130%;
+  }
 `;
 
 export const WhiteFooter = styled.div`
