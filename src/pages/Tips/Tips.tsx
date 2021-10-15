@@ -9,7 +9,9 @@ import {
   StyledTipsBg,
   Wrapper,
   Text,
-  WhiteFooter
+  WhiteFooter,
+  StyledWhiteRound,
+  StyledLastMessage
 } from './Tips.styles';
 
 const tips = [
@@ -61,8 +63,14 @@ export const Tips: FC = () => {
       </Text>
     </CenterWrapper>
     <WhiteFooter />
+
     {!lastSlide && (
       <StyledNext onClick={goNext} />
     )}
+
+    {lastSlide && (<>
+      <StyledWhiteRound />
+      <StyledLastMessage />
+    </>)}
   </Wrapper>);
 };
