@@ -58,4 +58,5 @@ export const Text = styled.div`
 export const StyledFivetips = styled(Fivetips)`
   display: block;
   margin: 0 auto;
+  height: 150px;
 `;

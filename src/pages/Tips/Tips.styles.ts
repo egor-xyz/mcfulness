@@ -46,6 +46,10 @@ export const Text = styled.div`
   font-size: 40px;
   color: #fff;
   font-weight: bold;
+  @media screen and (max-width: 390px) {
+    top: 30%;
+    font-size: 34px;
+  }
 `;
 
 export const StyledNext = styled(Next)`
@@ -54,6 +58,9 @@ export const StyledNext = styled(Next)`
   left: 50%;
   height: 140px;
   transform: translate3d(-50%, 50%, 0);
+  @media screen and (max-width: 390px) {
+    height: 110px;
+  }
 `;
 
 export const StyledWhiteRound = styled(WhiteRound)`
