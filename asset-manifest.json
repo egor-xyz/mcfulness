@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4c201572.chunk.css",
-    "main.js": "/static/js/main.2c0ff45b.chunk.js",
-    "main.js.map": "/static/js/main.2c0ff45b.chunk.js.map",
+    "main.js": "/static/js/main.73dfa787.chunk.js",
+    "main.js.map": "/static/js/main.73dfa787.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2726010c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2726010c.js.map",
     "static/css/2.679831fc.chunk.css": "/static/css/2.679831fc.chunk.css",
@@ -12,7 +12,7 @@
     "static/css/2.679831fc.chunk.css.map": "/static/css/2.679831fc.chunk.css.map",
     "static/css/main.4c201572.chunk.css.map": "/static/css/main.4c201572.chunk.css.map",
     "static/js/2.5c4892aa.chunk.js.LICENSE.txt": "/static/js/2.5c4892aa.chunk.js.LICENSE.txt",
-    "static/media/5tips.74a2ab96.svg": "/static/media/5tips.74a2ab96.svg",
+    "static/media/5tips.bcd7f6c7.svg": "/static/media/5tips.bcd7f6c7.svg",
     "static/media/Calm.c7e403ec.svg": "/static/media/Calm.c7e403ec.svg",
     "static/media/LastMessage.39e83045.svg": "/static/media/LastMessage.39e83045.svg",
     "static/media/Optimistic.a37c5fa0.svg": "/static/media/Optimistic.a37c5fa0.svg",
@@ -33,6 +33,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.5c4892aa.chunk.js",
     "static/css/main.4c201572.chunk.css",
-    "static/js/main.2c0ff45b.chunk.js"
+    "static/js/main.73dfa787.chunk.js"
   ]
 }
