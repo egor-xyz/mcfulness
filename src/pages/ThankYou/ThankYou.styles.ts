@@ -55,7 +55,7 @@ export const Text = styled.div`
   }
   @media screen and (max-width: 360px) {
     bottom: 260px;
-    font-size: 20px;
+    font-size: 25px;
   }
 `;
 
