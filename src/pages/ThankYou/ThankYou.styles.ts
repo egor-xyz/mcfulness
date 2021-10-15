@@ -17,7 +17,7 @@ export const StyledYBG = styled(YBG)`
   width: 100%;
   z-index: -1;
   transform: translateX(-50%);
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 428px) {
     bottom: -90px;
   }
 `;
@@ -26,7 +26,7 @@ export const Title = styled.div`
   margin-top: 10px;
   font-size: 34px;
   font-weight: bold;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 428px) {
     font-size: 25px;
   }
 `;
@@ -50,7 +50,7 @@ export const Text = styled.div`
   font-size: 48px;
   color: #fff;
   margin-bottom: 40px;
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 428px) {
     font-size: 30px;
   }
 `;
