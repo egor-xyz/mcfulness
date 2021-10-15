@@ -53,10 +53,17 @@ export const Text = styled.div`
   @media screen and (max-width: 428px) {
     font-size: 30px;
   }
+  @media screen and (max-width: 360px) {
+    bottom: 260px;
+    font-size: 20px;
+  }
 `;
 
 export const StyledFivetips = styled(Fivetips)`
   display: block;
   margin: 0 auto;
   height: 150px;
+  @media screen and (max-width: 360px) {
+    height: 130px;
+  }
 `;
