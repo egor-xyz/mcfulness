@@ -9,3 +9,5 @@ export { ReactComponent as Tired } from 'assets/tired.svg';
 export { ReactComponent as Jumpy } from 'assets/jumpy.svg';
 export { ReactComponent as YBG } from 'assets/y-bg.svg';
 export { ReactComponent as Fivetips } from 'assets/5tips.svg';
+export { ReactComponent as TipsBg } from 'assets/tips-bg.svg';
+export { ReactComponent as Next } from 'assets/next.svg';
