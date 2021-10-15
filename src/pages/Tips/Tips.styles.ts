@@ -47,7 +47,7 @@ export const Text = styled.div`
   color: #fff;
   font-weight: bold;
   @media screen and (max-width: 390px) {
-    top: 30%;
+    top: 25%;
     font-size: 34px;
   }
 `;
