@@ -2,13 +2,16 @@
 
 import React from 'react';
 import * as faceApi from 'face-api.js';
+import { Link } from 'react-router-dom';
+
+import { StyledLogo } from 'pages/Home/Home.styles';
 
 const expressionMap = {
   angry: '🤬',
   disgusted: '🤢',
-  fearful: '�',
+  fearful: '😧',
   happy: '😄',
-  neutral: '�',
+  neutral: '😶',
   sad: '😞',
   surprised: '😲'
 };
@@ -88,6 +91,7 @@ export class FaceApi extends React.Component {
         }}
       >
         <div>
+          <Link to='/'> <StyledLogo /></Link>
           <h1>Face Recognition Webcam</h1>
           <div>
             {expressions
