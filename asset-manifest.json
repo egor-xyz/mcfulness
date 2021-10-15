@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.4c201572.chunk.css",
-    "main.js": "/static/js/main.af422262.chunk.js",
-    "main.js.map": "/static/js/main.af422262.chunk.js.map",
+    "main.js": "/static/js/main.be436e85.chunk.js",
+    "main.js.map": "/static/js/main.be436e85.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2726010c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2726010c.js.map",
     "static/css/2.679831fc.chunk.css": "/static/css/2.679831fc.chunk.css",
-    "static/js/2.ad7e9bdf.chunk.js": "/static/js/2.ad7e9bdf.chunk.js",
-    "static/js/2.ad7e9bdf.chunk.js.map": "/static/js/2.ad7e9bdf.chunk.js.map",
+    "static/js/2.5c4892aa.chunk.js": "/static/js/2.5c4892aa.chunk.js",
+    "static/js/2.5c4892aa.chunk.js.map": "/static/js/2.5c4892aa.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.679831fc.chunk.css.map": "/static/css/2.679831fc.chunk.css.map",
     "static/css/main.4c201572.chunk.css.map": "/static/css/main.4c201572.chunk.css.map",
-    "static/js/2.ad7e9bdf.chunk.js.LICENSE.txt": "/static/js/2.ad7e9bdf.chunk.js.LICENSE.txt",
+    "static/js/2.5c4892aa.chunk.js.LICENSE.txt": "/static/js/2.5c4892aa.chunk.js.LICENSE.txt",
     "static/media/5tips.74a2ab96.svg": "/static/media/5tips.74a2ab96.svg",
     "static/media/Calm.c7e403ec.svg": "/static/media/Calm.c7e403ec.svg",
     "static/media/Optimistic.a37c5fa0.svg": "/static/media/Optimistic.a37c5fa0.svg",
@@ -19,16 +19,18 @@
     "static/media/busy.42e9c09d.svg": "/static/media/busy.42e9c09d.svg",
     "static/media/jumpy.ffc89484.svg": "/static/media/jumpy.ffc89484.svg",
     "static/media/logo.45db4dea.svg": "/static/media/logo.45db4dea.svg",
+    "static/media/next.94dce215.svg": "/static/media/next.94dce215.svg",
     "static/media/start.0388aa1a.svg": "/static/media/start.0388aa1a.svg",
     "static/media/stop.8a0fe9d2.svg": "/static/media/stop.8a0fe9d2.svg",
+    "static/media/tips-bg.2d84955e.svg": "/static/media/tips-bg.2d84955e.svg",
     "static/media/tired.23e653c4.svg": "/static/media/tired.23e653c4.svg",
     "static/media/y-bg.18227772.svg": "/static/media/y-bg.18227772.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2726010c.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.ad7e9bdf.chunk.js",
+    "static/js/2.5c4892aa.chunk.js",
     "static/css/main.4c201572.chunk.css",
-    "static/js/main.af422262.chunk.js"
+    "static/js/main.be436e85.chunk.js"
   ]
 }
